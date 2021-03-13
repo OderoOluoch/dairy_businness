@@ -10,20 +10,25 @@
     <div class="form">
         <p>sides</p>
         <div class="input-field">
-          <label for="num1">Side A</label>
-          <input class="number" type="text" id="num1" name="num1">
+          <label for="shade_a">Shade A</label>
+          <input class="number" type="text" id="shade_a" name="shade_a">
         </div>
         <div class="input-field">
-           <label for="num2">Side B</label>
-            <input class="number" type="text" id="num2" name="num2">
+           <label for="shade_b">Shade B</label>
+            <input class="number" type="text" id="shade_b" name="shade_b">
         </div>
         <div class="input-field">
-          <label for="num3">Side C</label>
-          <input class="number" type="text" id="num3" name="num3">
+          <label for="shade_c">Shade C</label>
+          <input class="number" type="text" id="shade_c" name="shade_c">
         </div>
-        <input class="button" type="button" value="Find Out" onclick="triangle()">
+        <div class="input-field">
+            <label for="shade_d">Shade D</label>
+            <input class="number" type="text" id="shade_d" name="shade_d">
+          </div>
+        <input class="button" type="button" value="Find Out" onclick="totalProduction()">
         <input class="button" type="button" value="Reset" onclick="reset()">
-        <p id="display"></p>
+        <p id="display_shades_sales"></p>
       </div>
+      <script src="index.js"></script>
 </body>
 </html>
