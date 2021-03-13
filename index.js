@@ -23,3 +23,7 @@ totalProduction(){
         totalProductionCalculation()
     }
 }
+
+totalProductionCalculation(){
+    console.log("TUko hapa");
+}
