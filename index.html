@@ -25,10 +25,22 @@
             <label for="shade_d">Shade D</label>
             <input class="number" type="text" id="shade_d" name="shade_d">
           </div>
+          <div class="sales">
+              <div id="results">
+
+              </div>
+          </div>
+          <p id="total"></p>
         <input class="button" type="button" value="Find Out" onclick="totalProduction()">
         <input class="button" type="button" value="Reset" onclick="reset()">
         <p id="display_shades_sales"></p>
-      </div>
+    </div>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
       <script src="index.js"></script>
 </body>
 </html>

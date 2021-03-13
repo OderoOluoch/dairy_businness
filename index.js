@@ -25,12 +25,16 @@ var totalProduction = function(){
 }
 
 var totalProductionCalculation = function(a,b,c,d){
+    
     var total = a + b + c + d;
-    console.log("Your production in Shed A " + a + " litres per day ")
-    console.log("Your production in Shed B " + b + " litres per day ")
-    console.log("Your production in Shed C " + c + " litres per day ")
-    console.log("Your production in Shed D " + d + " litres per day ")
-    console.log("The total production is " +total + " litres per day")
+
+    document.getElementById("results").innerHTML = " <p>Your production in Shed A " + 
+        a + " litres per day <br> Your production in Shed B " + 
+        b + " litres per day <br> Your production in Shed C " + 
+        c + " litres per day <br> Your production in Shed D " +
+        d + " litres per day <br><br>"
+
+    document.getElementById("total").innerHTML = "The total production is " +total + " litres per day"
 }
 
 var reset = function(){
