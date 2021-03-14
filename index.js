@@ -101,8 +101,9 @@ var leapYearReport = function(){
     monthArray = Object.keys(months)
     var i=0;
     for (x in months) {
-        document.getElementById("leap-year").innerHTML = "<p>Your income for " + monthArray[i] + " is " + 84420 * months[x] +" </p>"
+    
        console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
+    
        i++;
       }
     }
