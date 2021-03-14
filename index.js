@@ -58,14 +58,13 @@ var getIncomeOverTime = function (){
       if(timeLine.length === 0 || sellingPrice.length === 0 ){
         display_incomeOverTime_sales.innerHTML = "<p>Please fill in the values to calculate sales</p>"
       }else{
-            console.log(income,time);
+            console.log(timeLine,sellingPrice);
 
       //we get to convert the user input from string variables, to number variables
-           a = parseFloat(a);
-       b = parseFloat(b);
-       c = parseFloat(c);
-       d = parseFloat(d);
-       totalProductionCalculation(a,b,c,d)
+           a = parseFloat(timeLine);
+           b = parseFloat(sellingPrice);
+       
+       incomeOverTime(a,b);
        }
 
 }
