@@ -81,3 +81,28 @@ var incomeOverTime = function(sellingPrice, time){
     }
 }
 
+
+
+var leapYearReport = function(){
+    var months ={
+        January:31,
+        February:29,
+        March:31,
+        April:30,
+        May:31,
+        June:30,
+        July:31,
+        August:31,
+        September:30,
+        October:31,
+        November:30,
+        December:31
+    }
+    monthArray = Object.keys(months)
+    var i=0;
+    for (x in months) {
+       console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
+       i++;
+      }
+    }
+
