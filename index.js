@@ -42,7 +42,33 @@ var reset = function(){
 } 
 
 
+var getIncomeAndTime(){
+    //Declare an array that will hold income and time
+    var incomeAndTIme = [];
 
+     //we push the data that the user will give into the array.
+    incomeAndTIme.push(document.getElementById("timeLine").value);
+    incomeAndTIme.push(document.getElementById("price").value);
+
+
+      //the values of the array are hereby tanfered into variables a,b,c,d
+      var [income,time] = incomeAndTIme;
+
+      var display_incomeOverTime_sales = document.getElementById("display_incomeOverTime_sales");
+      if(a.length === 0 || b.length === 0 || c.length === 0 || d.length === 0){
+        display_incomeOverTime_sales.innerHTML = "<p>Please fill in the values to calculate sales</p>"
+      }else{
+            console.log(income,time);
+
+      //we get to convert the user input from string variables, to number variables
+        //   a = parseFloat(a);
+        //   b = parseFloat(b);
+        //   c = parseFloat(c);
+        //   d = parseFloat(d);
+        //   totalProductionCalculation(a,b,c,d)
+      }
+
+}
 
 
 
