@@ -101,11 +101,15 @@ var leapYearReport = function(){
     monthArray = Object.keys(months)
     var i=0;
     for (x in months) {
-    
        console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
        document.getElementById("leap-year").innerHTML =  "This should display" + i 
         console.log(monthArray[i])
+        console.log(months[x])
        i++;
       }
     }
 
+    var comparePriceChange = function(){
+        incomeOverTime(),
+        incomeOverTime()
+    }
