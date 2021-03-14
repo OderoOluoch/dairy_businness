@@ -41,6 +41,8 @@ var reset = function(){
     
 } 
 
+var display_incomeOverTime_sales = document.getElementById("display_incomeOverTime_sales");
+
 
 var getIncomeOverTime = function (){
     //Declare an array that will hold income and time
@@ -54,31 +56,28 @@ var getIncomeOverTime = function (){
       //the values of the array are hereby tanfered into variables a,b,c,d
       var [timeLine, sellingPrice] = sellingPriceAndTIme;
 
-      var display_incomeOverTime_sales = document.getElementById("display_incomeOverTime_sales");
+      display_incomeOverTime_sales = document.getElementById("display_incomeOverTime_sales");
       if(timeLine.length === 0 || sellingPrice.length === 0 ){
         display_incomeOverTime_sales.innerHTML = "<p>Please fill in the values to calculate sales</p>"
       }else{
-            console.log(timeLine,sellingPrice);
-
       //we get to convert the user input from string variables, to number variables
-           a = parseFloat(timeLine);
-           b = parseFloat(sellingPrice);
-       
-       incomeOverTime(a,b);
+           time = parseFloat(timeLine);
+           sell = parseFloat(sellingPrice);
+           console.log(time,sell)
+           incomeOverTime(sell,time);
        }
 
 }
 
-
-
-
-var incomeOverTime=function(selling_price, time){
-    console.log(1876*selling_price*time)
+var incomeOverTime = function(sellingPrice, time){
+    console.log(sellingPrice,time +" Hii ndio nataka")
     if(time===7){
-        console.log(1876*selling_price*time)
+        document.getElementById("display_incomeOverTime_sales").innerHTML =  "<p>Your weekly income will be Ksh " + (1876 * sellingPrice * time)+ " </p>"
+        console.log(1876 * sellingPrice * time)
     }
     else if(time===365){
-        console.log(1876*selling_price*time)
+        document.getElementById("display_incomeOverTime_sales").innerHTML =  "<p>Your yearly income will be Ksh "+ (1876 * sellingPrice * time) +" </p>"
+        console.log(1876 * sellingPrice * time)
     }
 }
 
