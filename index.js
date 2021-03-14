@@ -101,18 +101,21 @@ var leapYearReport = function(){
     monthArray = Object.keys(months)
     var report = {}
     var i=0;
+    //console.log(months)
     for (x in months) {
-    //    console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
-    //    document.getElementById("leap-year").innerHTML =  "This should display" + i 
+        console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
+        i++;
+        document.getElementById("leapYear").innerHTML =  "This should display" + i 
     //     console.log(monthArray[i])
-    //     console.log(months[x])
-        report.month = monthArray[i];
-        report.amount = (84420 * months[x])
-        console.log("Your income for " + report.month + " is " + report.amount);
-        console.log(report.month)
-        document.getElementById("leap-year").innerHTML =  "This should display" + i 
+      // console.log(months[x])
+    //     report.month = monthArray[i];
+    //     report.amount = (84420 * months[x])
+    //     console.log("Your income for " + report.month + " is " + report.amount);
+    //     console.log(report.month)
+    //     document.getElementById("leap-year").innerHTML =  "This should display" + i 
         
-       i++;
+    //    i++;
+
        
       }
 
