@@ -42,7 +42,7 @@ var reset = function(){
 } 
 
 
-var getIncomeAndTime(){
+var getIncomeAndTime = function (){
     //Declare an array that will hold income and time
     var incomeAndTIme = [];
 
@@ -55,7 +55,7 @@ var getIncomeAndTime(){
       var [income,time] = incomeAndTIme;
 
       var display_incomeOverTime_sales = document.getElementById("display_incomeOverTime_sales");
-      if(a.length === 0 || b.length === 0 || c.length === 0 || d.length === 0){
+      if(income.length === 0 || time.length === 0 ){
         display_incomeOverTime_sales.innerHTML = "<p>Please fill in the values to calculate sales</p>"
       }else{
             console.log(income,time);
