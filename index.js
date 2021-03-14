@@ -103,7 +103,8 @@ var leapYearReport = function(){
     for (x in months) {
     
        console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
-    
+       document.getElementById("leap-year").innerHTML =  "This should display" + i 
+        console.log(monthArray[i])
        i++;
       }
     }
