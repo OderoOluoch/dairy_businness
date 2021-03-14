@@ -4,26 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Wa Ng'ombe Dairy</title>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="main">
     <div class="heading">
-        <h1>DIARY MANAGEMENT PORTAL</h1>
+        <h1>WA NG'OMBE DAIRY MANAGEMENT PORTAL</h1>
     </div>
     <div class="title">
       <h1>Enter Litres</h1>
     </div>
     <div class="contact-form">
       <div class="input-fields">
-        <input type="text" class="input" placeholder="Shade A">
-        <input type="text" class="input" placeholder="Shade B">
-        <input type="text" class="input" placeholder="Shade C">
-        <input type="text" class="input" placeholder="Shade D">
-        <div class="btn">send</div>
+        <input type="text" class="input" placeholder="Shade A" id="shade_a" name="shade_a" >
+        <input type="text" class="input" placeholder="Shade B" id="shade_b" name="shade_b">
+        <input type="text" class="input" placeholder="Shade C" id="shade_c" name="shade_c">
+        <input type="text" class="input" placeholder="Shade D" id="shade_d" name="shade_d">
+        <input class="btn" type="button" value="Generate Report" onclick="totalProduction()">
       </div> 
     </div>
   </div> 
+  <div class="output" id="results">
+      <div class="title">
+        <h1>Daily production in ltrs.</h1>
+      </div>
+      <div class="production-area">
+          <div id="results">
+
+          </div>
+          <div id="total">
+        
+          </div>
+      </div>
+  </div>
+  
     <!-- <div class="form">
         <p>sides</p>
         <div class="input-field">
