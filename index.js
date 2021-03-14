@@ -40,3 +40,20 @@ var totalProductionCalculation = function(a,b,c,d){
 var reset = function(){
     
 } 
+
+
+
+
+
+
+
+var incomeOverTime=function(selling_price, time){
+    console.log(1876*selling_price*time)
+    if(time===7){
+        console.log(1876*selling_price*time)
+    }
+    else if(time===365){
+        console.log(1876*selling_price*time)
+    }
+}
+
