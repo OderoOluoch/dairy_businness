@@ -99,14 +99,27 @@ var leapYearReport = function(){
         December:31
     }
     monthArray = Object.keys(months)
+    var report = {}
     var i=0;
     for (x in months) {
-       console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
-       document.getElementById("leap-year").innerHTML =  "This should display" + i 
-        console.log(monthArray[i])
-        console.log(months[x])
+    //    console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
+    //    document.getElementById("leap-year").innerHTML =  "This should display" + i 
+    //     console.log(monthArray[i])
+    //     console.log(months[x])
+        report.month = monthArray[i];
+        report.amount = (84420 * months[x])
+        console.log("Your income for " + report.month + " is " + report.amount);
+        console.log(report.month)
+        
        i++;
       }
+
+      return report;
+    }
+
+    var report = function(){
+        var imekuja =leapYearReport();
+        console.log(imekuja)
     }
 
     var comparePriceChange = function(){
