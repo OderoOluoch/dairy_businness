@@ -34,9 +34,11 @@ var totalProductionCalculation = function(a,b,c,d){
         c + " litres per day <br> Your production in Shed D " +
         d + " litres per day <br><br>"
 
-    document.getElementById("total").innerHTML = "The total production is " +total + " litres per day"
+    document.getElementById("totals").innerHTML = "<p>The total production is " +total + " litres per day</p>"
 
-    getIncomeOverTime()
+    incomeOverTime(45,7);
+    incomeOverTime(45,365);
+    //getIncomeOverTime()
 }
 
 
@@ -72,11 +74,11 @@ var getIncomeOverTime = function (){
 var incomeOverTime = function(sellingPrice, time){
     console.log(sellingPrice,time +" Hii ndio nataka")
     if(time===7){
-        document.getElementById("display_incomeOverTime_sales").innerHTML =  "<p>Your weekly income will be Ksh " + (1876 * sellingPrice * time)+ " </p>"
+        document.getElementById("display_incomeOverTime_weekly").innerHTML =  "<p>Your weekly income will be Ksh " + (1876 * sellingPrice * time)+ " </p>"
         console.log(1876 * sellingPrice * time)
     }
     else if(time===365){
-        document.getElementById("display_incomeOverTime_sales").innerHTML =  "<p>Your yearly income will be Ksh "+ (1876 * sellingPrice * time) +" </p>"
+        document.getElementById("display_incomeOverTime_yearly").innerHTML =  "<p>Your yearly income will be Ksh "+ (1876 * sellingPrice * time) +" </p>"
         console.log(1876 * sellingPrice * time)
     }
 }
