@@ -10,9 +10,12 @@
 html{
     overflow-y: scroll;
 }
+p{
+  color: white;
+}
 
 body{
-  background: url('./images/farm.jpg') no-repeat top center;
+  background: url('./images/farm.jpg') no-repeat top center static;
   background-size: cover;
   height: 100vh;
 }
@@ -31,7 +34,20 @@ body{
 }
 .output{
     position: absolute;
-    top: 570px;
+    top: 530px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 550px;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.overTime{
+  position: absolute;
+    top: 720px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;

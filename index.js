@@ -35,11 +35,11 @@ var totalProductionCalculation = function(a,b,c,d){
         d + " litres per day <br><br>"
 
     document.getElementById("total").innerHTML = "The total production is " +total + " litres per day"
+
+    getIncomeOverTime()
 }
 
-var reset = function(){
-    
-} 
+
 
 var display_incomeOverTime_sales = document.getElementById("display_incomeOverTime_sales");
 
@@ -131,3 +131,6 @@ var leapYearReport = function(){
         incomeOverTime(),
         incomeOverTime()
     }
+    var reset = function(){
+    
+    } 
