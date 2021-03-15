@@ -59,7 +59,7 @@ body{
 }
 .leapYearReport {
   position: absolute;
-  top: 720px;
+  top: 850px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
