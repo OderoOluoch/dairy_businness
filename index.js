@@ -2,25 +2,27 @@ var totalProduction = function(){
     //create an array variable to store the sales per shade in one day
     var shades = [];
 
+
     //we push the data that the user will give into the array.
     shades.push(document.getElementById("shade_a").value);
     shades.push(document.getElementById("shade_b").value);
     shades.push(document.getElementById("shade_c").value);
     shades.push(document.getElementById("shade_d").value);
 
+
     //the values of the array are hereby tanfered into variables a,b,c,d
     var [a,b,c,d] = shades;
 
     var displayShadesSales = document.getElementById("display_shades_sales");
-    if(a.length === 0 || b.length === 0 || c.length === 0 || d.length === 0){
-        displayShadesSales.innerHTML = "<p>Please fill in the values to calculate sales</p>"
-    }else{
+        if(a.length === 0 || b.length === 0 || c.length === 0 || d.length === 0){
+            displayShadesSales.innerHTML = "<p>Please fill in the values to calculate sales</p>"
+        }else{
     //we get to convert the user input from string variables, to number variables
-        a = parseFloat(a);
-        b = parseFloat(b);
-        c = parseFloat(c);
-        d = parseFloat(d);
-        totalProductionCalculation(a,b,c,d)
+            a = parseFloat(a);
+            b = parseFloat(b);
+            c = parseFloat(c);
+            d = parseFloat(d);
+            totalProductionCalculation(a,b,c,d)
     }
 }
 
@@ -38,6 +40,7 @@ var totalProductionCalculation = function(a,b,c,d){
 
     incomeOverTime(45,7);
     incomeOverTime(45,365);
+    leapYearReport();
     //getIncomeOverTime()
 }
 
@@ -53,11 +56,8 @@ var getIncomeOverTime = function (){
      //we push the data that the user will give into the array.
      sellingPriceAndTIme.push(document.getElementById("timeLine").value);
      sellingPriceAndTIme.push(document.getElementById("price").value);
-
-
       //the values of the array are hereby tanfered into variables a,b,c,d
       var [timeLine, sellingPrice] = sellingPriceAndTIme;
-
       display_incomeOverTime_sales = document.getElementById("display_incomeOverTime_sales");
       if(timeLine.length === 0 || sellingPrice.length === 0 ){
         display_incomeOverTime_sales.innerHTML = "<p>Please fill in the values to calculate sales</p>"
@@ -72,14 +72,13 @@ var getIncomeOverTime = function (){
 }
 
 var incomeOverTime = function(sellingPrice, time){
-    console.log(sellingPrice,time +" Hii ndio nataka")
     if(time===7){
         document.getElementById("display_incomeOverTime_weekly").innerHTML =  "<p>Your weekly income will be Ksh " + (1876 * sellingPrice * time)+ " </p>"
-        console.log(1876 * sellingPrice * time)
+
     }
     else if(time===365){
         document.getElementById("display_incomeOverTime_yearly").innerHTML =  "<p>Your yearly income will be Ksh "+ (1876 * sellingPrice * time) +" </p>"
-        console.log(1876 * sellingPrice * time)
+        
     }
 }
 
@@ -100,33 +99,39 @@ var leapYearReport = function(){
         November:30,
         December:31
     }
-    monthArray = Object.keys(months)
-    var report = {}
-    var i=0;
-    //console.log(months)
-    for (x in months) {
-        console.log("Your income for " + monthArray[i] + " is " + 84420 * months[x]);
-        i++;
-        document.getElementById("leapYear").innerHTML =  "This should display" + i 
-    //     console.log(monthArray[i])
-      // console.log(months[x])
-    //     report.month = monthArray[i];
-    //     report.amount = (84420 * months[x])
-    //     console.log("Your income for " + report.month + " is " + report.amount);
-    //     console.log(report.month)
-    //     document.getElementById("leap-year").innerHTML =  "This should display" + i 
+
+    monthArray = Object.keys(months);
+    monthDayArray = Object.values(months);
+    console.log(monthDayArray);
+    console.log(monthArray);
+
+    for (let i = 0; i <= monthArray;i++) {
+        console.log("This should log.. ")
+        console.log(i)
+        console.log(monthArray[i])
+        console.log(monthDayArray[i])
         
-    //    i++;
+    }
+    console.log("This s")
 
-       
-      }
 
-      return report;
+    // for (x in months) {
+    //     //console.log(`Your income for   ${monthArray[i]}   is   ${(84420 * months[x])}`);
+    //     //document.getElementById("leapyear").innerHTML =   `Your income for   ${monthArray[i]}   is   ${(84420 * months[x])}`
+    //     var para = document.createElement("p"); 
+    //     para.setAttribute("id", `${monthArray[i]}`);         
+    //     para.innerHTML =   `Your income for   ${monthArray[i]}   is   ${(84420 * months[x])}`               // Insert text
+    //     document.getElementById(`${monthArray[i]}`).appendChild(para);
+    //     i++
+        
+    
+    //     }
+
+    
     }
 
     var report = function(){
-        var imekuja =leapYearReport();
-        console.log(imekuja)
+        
     }
 
     var comparePriceChange = function(){
@@ -136,3 +141,14 @@ var leapYearReport = function(){
     var reset = function(){
     
     } 
+
+
+
+    function generateYearlyReport(buying_rate){
+        ul.innerHTML = ''
+        Object.keys(days_in_months).forEach((key, index) =>{
+            var list1= document.createElement('li');
+            ul.appendChild(list1);
+            list1.innerHTML = `Total income for ${key} is: ${(days_in_months[key] * total_production) * buying_rate}`;   
+        })
+    }
