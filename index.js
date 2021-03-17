@@ -102,30 +102,18 @@ var leapYearReport = function(){
 
     monthArray = Object.keys(months);
     monthDayArray = Object.values(months);
-    console.log(monthDayArray);
-    console.log(monthArray);
 
-    for (let i = 0; i <= monthArray;i++) {
-        console.log("This should log.. ")
-        console.log(i)
-        console.log(monthArray[i])
-        console.log(monthDayArray[i])
-        
-    }
-    console.log("This s")
+    for (var a =0; a<12; a++){
+        //console.log(`Your income for   ${monthArray[a]}   is   ${(84420 * monthDayArray[a])}`);
 
+        // var leapYearReport=  document.getElementById("leapyear");
 
-    // for (x in months) {
-    //     //console.log(`Your income for   ${monthArray[i]}   is   ${(84420 * months[x])}`);
-    //     //document.getElementById("leapyear").innerHTML =   `Your income for   ${monthArray[i]}   is   ${(84420 * months[x])}`
-    //     var para = document.createElement("p"); 
-    //     para.setAttribute("id", `${monthArray[i]}`);         
-    //     para.innerHTML =   `Your income for   ${monthArray[i]}   is   ${(84420 * months[x])}`               // Insert text
-    //     document.getElementById(`${monthArray[i]}`).appendChild(para);
-    //     i++
-        
-    
-    //     }
+        var para = document.createElement("p"); 
+        para.setAttribute("id", `${monthArray[a]}`);         
+        para.innerHTML =   `Your income for   ${monthArray[a]}   is   ${(84420 * monthDayArray[a])}`               // Insert text
+        document.getElementById("leapyear").appendChild(para);
+        }
+
 
     
     }
