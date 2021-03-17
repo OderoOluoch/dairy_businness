@@ -127,7 +127,7 @@ var leapYearReport = function(){
         incomeOverTime()
     }
     var reset = function(){
-    
+        location.reload();
     } 
 
 

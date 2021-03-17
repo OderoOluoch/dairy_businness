@@ -15,7 +15,7 @@ p{
 }
 
 body{
-  background: url('./images/farm.jpg') no-repeat top center static;
+  background-image: url('./images/farm.jpg') no-repeat top center static;
   background-size: cover;
   height: 100vh;
 }
@@ -34,7 +34,7 @@ body{
 }
 .output{
     position: absolute;
-    top: 530px;
+    top: 700px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -47,7 +47,7 @@ body{
 
 .overTime{
   position: absolute;
-    top: 720px;
+    top: 1000px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -59,7 +59,7 @@ body{
 }
 .leapYearReport {
   position: absolute;
-  top: 850px;
+  top: 1300px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -79,6 +79,9 @@ body{
   color: #c5ecfd;
   text-align: center;
   margin-bottom: 25px;
+}
+h1{
+  color: #c5ecfd;
 }
 
 .contact-form{
@@ -131,14 +134,5 @@ body{
 }
 
 @media screen and (max-width: 600px){
-  .contact-form{
-    flex-direction: column;
-  }
-  .msg textarea{
-    height: 80px;
-  }
-  .input-fields,
-  .msg{
-    width: 100%;
-  }
+  
 }
